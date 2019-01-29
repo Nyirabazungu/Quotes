@@ -1,5 +1,6 @@
 .container{
     background-image:url( nyira.jpeg);
+    background-size: cover;
     
 }
 .row{
