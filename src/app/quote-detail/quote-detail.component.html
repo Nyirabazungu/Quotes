@@ -1,0 +1,13 @@
+<!--<p>quote-detail works!</p>-->
+<p>{{quote.author}}</p>
+<p>{{quote.submittedBy}}</p>
+<p>{{quote.upvote}}</p>
+<p>{{quote.downvote}}</p>
+<br>
+<button  class=" btn-vote"(click) = 'upvote()'> Upvote </button>
+<button  class=" btn-vote"(click) = 'downvote()'> Downvote </button>
+<br>
+<p>{{quote.description}}</p>
+<p>complete in {{quote.completeDate|dateCount}} days</p>
+<button class=" btn-danger" (click) =  'quoteDelete(true)'> Delete Quote </button>
+

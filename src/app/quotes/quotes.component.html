@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row">
+
+        <div style="text-align:center">
+            <h1>welcome to {{title}} App!</h1>
+            <hr>
+
+            <ul>
+                 <div class="row" *ngFor='let quote of quotes;let i = index'>
+
+                    <h4 id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date |uppercase}}</h4>
+                    <button (click)='toogleDetail(i)'>Detail of quote</button>
+
+                    <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuotes($event,i)'></app-quote-detail>
+                    
+                </div>
+                <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+
+        </ul>
+    </div>
+</div>
+</div>
+
